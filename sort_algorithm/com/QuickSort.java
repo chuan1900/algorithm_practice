@@ -52,3 +52,25 @@ private void swap(int i, int j){
 }
 
 }
+
+
+
+
+/*
+*Insertion Sort
+*/
+public void insertionSort(int[] nums){
+  for(int i = 0; i < nums.length; i++){
+    //int curr = nums[i];
+    int j = i;
+    while(j > 0 && nums[j - 1] > nums[j]){
+      swap(nums, nums[j-1], nums[j]);
+      j--;
+    }
+
+  }
+}
+
+
+
+
