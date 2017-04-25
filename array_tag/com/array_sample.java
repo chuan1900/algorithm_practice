@@ -56,6 +56,22 @@ public int search(int[] nums, int target){
 }
 
 
+/*
+* contains duplicate
+* Using hashmap 
+* @param k
+* @param 
+*
+*/
+
+public boolean containsNearByDuplicate(int[] nums, int k){
+	HashMap<Integer, Integer> hm = new HashMap<>();
+	for(int i = 0; i < nums.length; i++){
+		if(hm.containsKey(nums[i]) && (hm.get(nums[i]) - i) <= k) return true;
+		else hm.put(nums[i],i);
+	}
+	return false;
+}
 
 
 
