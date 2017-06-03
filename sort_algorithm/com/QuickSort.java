@@ -19,7 +19,7 @@ class QuickSort {
   private void quickSort(int low, int high){
     int i = low;
     int j = high;
-    int pivot = low + (high - low)/2;
+    int pivot = input[low + (high - low)/2];
 /*
 *In each iteration, we identify a number in left side of input[] that is greater than pivot
 *and a number in right side that is less than pivot
@@ -27,12 +27,12 @@ class QuickSort {
 */
     while(i <= j){
       while(input[i] < pivot) i++;
-      while(input[j] > pivot) j++;
+      while(input[j] > pivot) j--;
       if(i <= j){
         swap(i, j);
         i++;
-        j++; 
-           }
+        j-- ; 
+      }
     }
   //call quickSort() recursively
    if(low < j){
